@@ -11,3 +11,6 @@ class Partner(models.Model):
         string="Attended Sessions", readonly=True)
     channel     = fields.Char(string="Youtube ")
     # mobile       = fields.Char(string="mobile instructor" ,required=True)
+    _sql_constraints=[
+        ("mobile__unique","unique(mobile)","this mobile is already exist.")
+    ]

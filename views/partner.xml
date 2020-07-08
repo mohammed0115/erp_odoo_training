@@ -30,6 +30,7 @@ the type of views type:
                 </notebook>
                 <xpath expr="//field[@name='category_id']"   position="after">
                      <field name="channel"> </field>
+                     <button name="make_new_session" string="creat session" type="object" class="oe_highlight"></button>
                 </xpath>
                      <field name="vat" position="after">
                        <field name="channel"></field>

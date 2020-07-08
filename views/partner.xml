@@ -38,9 +38,14 @@ the type of views type:
                       <xpath expr="//field[@name='mobile']"   position="attributes">
                      <field name="required"> </field>
                 </xpath>
-                <!-- <field name="mobile" position="attributes">
-                       <field name="required"></field>
-                      </field> -->
+
+                   <xpath expr="//field[@name='channel']"   position="attributes">
+                     <attribute name="attrs">
+                     {'invisible':[('instructor','=',False)]}
+                     </attribute>
+
+                </xpath>
+               
             </field>
         </record>
 

@@ -28,16 +28,29 @@ the type of views type:
                         </group>
                     </page>
                 </notebook>
+                <xpath expr="//field[@name='category_id']"   position="after">
+                     <field name="channel"> </field>
+                </xpath>
+                     <field name="vat" position="after">
+                       <field name="channel"></field>
+                      </field>
+
+                      <xpath expr="//field[@name='mobile']"   position="attributes">
+                     <field name="required"> </field>
+                </xpath>
+                <!-- <field name="mobile" position="attributes">
+                       <field name="required"></field>
+                      </field> -->
             </field>
         </record>
 
         <record model="ir.actions.act_window" id="contact_list_action">
             <field name="name">Contacts</field>
             <field name="res_model">res.partner</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
 <menuitem id="Partner_menu" name="Partner"
                   parent="openacademy_menu"
                   action="contact_list_action"/>
 
-</odoo>
+</odoo> 

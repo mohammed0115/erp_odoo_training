@@ -9,3 +9,5 @@ class Partner(models.Model):
 
     session_ids = fields.Many2many('openacademy.session',
         string="Attended Sessions", readonly=True)
+    channel     = fields.Char(string="Youtube ")
+    # mobile       = fields.Char(string="mobile instructor" ,required=True)

@@ -46,7 +46,16 @@ the type of views type:
                      </attribute>
 
                 </xpath>
-               
+
+
+                <xpath expr="//sheet"   position="before">
+                     <header>
+                    <button name="make_new_session" string="creat session" type="object" class="oe_highlight"></button>
+                     </header>
+
+                </xpath>
+
+
             </field>
         </record>
 

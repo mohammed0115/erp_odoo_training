@@ -1,4 +1,4 @@
-from odoo import fields, models,_
+from odoo import fields, models,_,api
 
 class Partner(models.Model):
     _inherit = 'res.partner'
@@ -28,3 +28,11 @@ class Partner(models.Model):
             'context':context
 
         }
+
+    @api.depends('name','mobile')
+    def name_get(self):
+        res=[]
+        for partner in self:
+            name=partner._get_name()
+            res.append((partner.ids,name+"-"+self.mobile))
+        return res
